@@ -1,0 +1,7 @@
+def flatten(lst):
+  def flatten_helper(list):
+    if type(list) == type([]):
+      return reduce(lambda x,y: x + y, map(flatten, list))
+    else:
+      return list
+  flatten_helper(lst):
